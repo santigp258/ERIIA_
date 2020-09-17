@@ -3,7 +3,7 @@
 
     // Lettering
 
-    $(".nombre-sitio").lettering();
+   /*  $(".nombre-sitio").lettering(); */
 
      //identificar posición en la página
      $('body.invitados .navegacion-principal a:contains("Invitados")').addClass('activo');

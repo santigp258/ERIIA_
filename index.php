@@ -108,7 +108,7 @@
         <p class="numero"></p> Invitados
       </li>
       <li>
-        <p class="numero"></p> Jornada
+        <p class="numero"></p> Jornadas
       <li>
       <li>
         <p class="numero"></p> Días

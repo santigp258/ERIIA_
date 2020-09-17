@@ -247,6 +247,7 @@ h1.nombre-sitio span{
   height: 100vh;
   background-position: top center;
   background-size: cover;
+  display: inline-block;
 
  }
 
@@ -321,17 +322,50 @@ p.slogan span{
   font-weight: bold;
 }
 
-h1.nombre-sitio{
+/* h1.nombre-sitio{
   font-size: 5.9vw;
   text-transform: uppercase;
   font-family: 'PT Sans', sans-serif;
+} */
+h1.nombre-sitio{
+  display: none;
 }
 
 @media only screen and (min-width:768px) {
   h1.nombre-sitio{
-    font-size: 11.5vw;
-    margin: 0;
+    font-size: 2vw;
+    display: block;
+    margin-top: 50%;
+    width: 50%;
+    float:left;
     line-height: 1;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+  }
+}
+
+@media only screen and (min-width:1024px) {
+  h1.nombre-sitio{
+    font-size: 2vw;
+    display: block;
+    margin-top: 36%;
+    width: 50%;
+    float:left;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+  }
+}
+@media only screen and (min-width:1366px) {
+  h1.nombre-sitio{
+    font-size: 2vw;
+    display: block;
+    margin-top: 300px;
+    width: 50%;
+    float:left;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
   }
 }
 
@@ -480,14 +514,19 @@ div.encabezado img{
 }
 
 @media only screen and (min-width:768px) {
-  div.encabezado img{
-    width: 70%;
+  div.encabezado{
+    width: 50%;
     float: right;
-    margin-top: 40px;
+    margin-top: 8%;
+  } 
+  div.encabezado img{
+    width: 100%!important;
+    
   }
+  
 }
 
-@media only screen and (min-width:700px) {
+/* @media only screen and (min-width:700px) {
   div.encabezado img{
     width: 50%;
     float: right;
@@ -499,30 +538,44 @@ div.encabezado img{
     overflow: hidden;
     margin-top: 130px;
   }
-}
+} */
 
 @media only screen and (min-width:1024px) {
-  div.encabezado img{
+  div.encabezado{
     width: 50%;
     float: right;
-    margin-top: 10px;
-  }
+    margin: 0 auto;
+  } 
 }
+div.encabezado img{
+    width: 50%;
+  }
+ 
 
 @media only screen and (min-width:1366px) {
-  div.encabezado img{
+  
+  div.encabezado{
     width: 50%;
     float: right;
+  } 
+  div.encabezado img{
+    width: 80%;
     margin-top: -40px;
   }
 }
+  
 
 @media only screen and (min-width:1920px) {
-  div.encabezado img{
-    width: 40%;
+  
+  div.encabezado{
+    width: 50%;
     float: right;
+  } div.encabezado img{
+    width: 40%;
+ 
     margin-top: 100px ;
   }
+  
 }
 
 /*navegación principal */

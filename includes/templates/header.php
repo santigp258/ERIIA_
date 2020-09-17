@@ -53,15 +53,9 @@
             <a href="https://instagram.com/eriiauv?igshid=14fzs7jthijzy"><i class="fab fa-instagram"></i></a>
       </nav>
 
-   <!--    <div class="informacion-evento">
-        <div class="clearfix">
-          <p class="fecha"><i class="far fa-calendar-alt"></i> 10-12 dic</p>
-          <p class="university"><i class="fas fa-university"></i>Univalle</p>
-          
-        </div> 
+   <div class="informacion-evento">
    
-    <h1 class="nombre-sitio">Eriia</h1>
-    <p class="slogan">Encuentro Regional de  <span>Ingenieria Industrial</span> y afines</p>
+    <h1 class="nombre-sitio">X ENCUENTRO REGIONAL DE INGENIERÍA INDUSTRIAL Y AFINES</h1>
 
       </div>  <!--Informacióń evento--> 
       <div class="encabezado">
