@@ -108,7 +108,7 @@
         <p class="numero"></p> Invitados
       </li>
       <li>
-        <p class="numero"></p> Talleres
+        <p class="numero"></p> Jornada
       <li>
       <li>
         <p class="numero"></p> Días
@@ -119,81 +119,6 @@
   <!--contenedor-->
 </div>
 <!--parallax-->
-
-
-
-<section class="seccion">
-  <h2>Testimoniales</h2>
-  <div class="testimoniales contenedor clearfix">
-
-    <div class="testimonial">
-      <blockquote>
-        <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-          magni laborum corporis. Accusamus aliquam, minima, modi, quo dol
-          or fugit nam quidem quae atque voluptas amet distinctio aperiam
-          suscipit at magnam.</p>
-
-        <footer class="info-testimonial clearfix">
-
-          <img src="img/testimonial.jpg" alt="testimonial">
-
-          <cite>Santiago Guerrero <span>Diseñador</span></cite>
-
-        </footer>
-      </blockquote>
-    </div>
-    <!--testimonial-->
-
-    <div class="testimonial">
-      <blockquote>
-        <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-          magni laborum corporis. Accusamus aliquam, minima, modi, quo dol
-          or fugit nam quidem quae atque voluptas amet distinctio aperiam
-          suscipit at magnam.</p>
-
-        <footer class="info-testimonial clearfix">
-
-          <img src="img/testimonial.jpg" alt="testimonial">
-
-          <cite>Santiago Guerrero <span>Diseñador</span></cite>
-
-        </footer>
-      </blockquote>
-    </div>
-    <!--testimonial-->
-
-    <div class="testimonial">
-      <blockquote>
-        <p><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-          magni laborum corporis. Accusamus aliquam, minima, modi, quo dol
-          or fugit nam quidem quae atque voluptas amet distinctio aperiam
-          suscipit at magnam.</p>
-
-        <footer class="info-testimonial clearfix">
-
-          <img src="img/testimonial.jpg" alt="testimonial">
-
-          <cite>Santiago Guerrero <span>Diseñador</span></cite>
-
-        </footer>
-      </blockquote>
-    </div>
-    <!--testimonial-->
-  </div>
-  <!--testimoniales-->
-</section>
-
-
-<div class="newsletter parallax">
-  <div class="contenido contenedor">
-
-    <h3>ERIIA</h3>
-    <a href="registro.php" class="button transparente">Registro</a>
-
-  </div>
-  <!--contenido-->
-</div>
-<!--newsletter-->
 
 <section class="seccion">
   <h2>Faltan</h2>
@@ -215,6 +140,8 @@
   </div>
   <!--seccion-->
 </section>
+
+
 
 
 <?php include_once 'includes/templates/footer.php'; ?>
