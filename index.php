@@ -5,8 +5,12 @@
   </h2>
   <p class="descripcion">El mundo globalizado hoy ha sufrido un importante revés que ha afectado su normalidad, las cadenas de abastecimiento robustas y que sobrepasan las fronteras se han visto afectados por un organismo inerte que ha sumido la economía mundial en un letargo, cuyo pronóstico de recuperación superará la década para alcanzar el ritmo vertiginoso que venía trayendo. <br>
     <br>
-    Es en este aspecto, que en el marco del décimo aniversario del Encuentro Regional de Ingeniería Industrial y Afines -ERIIA, hemos querido abordar un tema de gran interés para el sector comercial, empresarial y académico, pues éste será materia de importantes investigación en el próximo lustro, donde evaluaremos cuán preparados estamos para afrontar situaciones que en poco tiempo paralizaron la economía mundial. <a target="a_blank" href="https://drive.google.com/file/d/1CE5JvRniZT1g87v2d_NgkPBC9AKjcusc/view?usp=sharing">BRIEF ERIIA 2020</a></p>
+    Es en este aspecto, que en el marco del décimo aniversario del Encuentro Regional de Ingeniería Industrial y Afines -ERIIA, hemos querido abordar un tema de gran interés para el sector comercial, empresarial y académico, pues éste será materia de importantes investigación en el próximo lustro, donde evaluaremos cuán preparados estamos para afrontar situaciones que en poco tiempo paralizaron la economía mundial. </p>
+    <div class="brieferiia">
+  <a class="brief" target="a_blank" href="https://drive.google.com/file/d/1CE5JvRniZT1g87v2d_NgkPBC9AKjcusc/view?usp=sharing">BRIEF ERIIA 2020</a>
+</div>
 </section>
+
 <!--seccion-->
 
 <section class="programa">

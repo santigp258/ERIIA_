@@ -1522,17 +1522,22 @@ p.descripcion{
 }
 .seccion p.justifi{
   text-align: justify!important;
-}
+} 
 
 /*brief */
-
-p.descripcion a{
+.brieferiia{
+  width:20%;
+}
+.brief{
   text-decoration: none;
-  color: #000000;
-}
-p.descripcion a:hover{
   color: #fe4918;
+text-align: center;
+font-size: 15px;
 }
+.brief:hover{
+  color: #000000;
+  text-decoration: none;
+} 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
