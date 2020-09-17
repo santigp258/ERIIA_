@@ -1523,6 +1523,16 @@ p.descripcion{
 .seccion p.justifi{
   text-align: justify!important;
 }
+
+/*brief */
+
+p.descripcion a{
+  text-decoration: none;
+  color: #000000;
+}
+p.descripcion a:hover{
+  color: #fe4918;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
