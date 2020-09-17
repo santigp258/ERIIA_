@@ -1526,15 +1526,22 @@ p.descripcion{
 
 /*brief */
 .brieferiia{
-  width:20%;
+  width:100%;
+  text-align: center;
+  margin-top: 30px;
 }
 .brief{
   text-decoration: none;
-  color: #fe4918;
-text-align: center;
+  color: #ffF;
+  text-align: center;
+  background: #69aa6e;
+  padding: 10px;
+  border-radius: 7px;
+  font-weight: bold;
 }
 .brief:hover{
-  color: #000000;
+  background: #4e8952;
+  color: #fff;
   text-decoration: none;
 } 
 /* ==========================================================================
