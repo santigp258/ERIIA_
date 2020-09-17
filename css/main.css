@@ -1416,6 +1416,7 @@ div.calendario::after{
 
 div.dia{
   width: 50%;
+  height: 360px;
   float: left;
   border: 2px solid #e1e1e1;
   transition: all .3s ease;
