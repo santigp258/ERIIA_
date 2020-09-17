@@ -50,7 +50,7 @@
 
       <nav class="redes-sociales">
             <a href="https://www.facebook.com/eriia2018/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/eriiauv?igshid=14fzs7jthijzy"><i class="fab fa-instagram"></i></a>
       </nav>
 
    <!--    <div class="informacion-evento">
