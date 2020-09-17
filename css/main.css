@@ -247,8 +247,6 @@ h1.nombre-sitio span{
   height: 100vh;
   background-position: top center;
   background-size: cover;
-  display: inline-block;
-
  }
 
  div.contenido-header{
@@ -361,6 +359,18 @@ h1.nombre-sitio{
     font-size: 2vw;
     display: block;
     margin-top: 300px;
+    width: 50%;
+    float:left;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+  }
+}
+@media only screen and (min-width:1920px) {
+  h1.nombre-sitio{
+    font-size: 2vw;
+    display: block;
+    margin-top: 350px;
     width: 50%;
     float:left;
     line-height: 1;
@@ -501,7 +511,7 @@ div.logo img{
 
 /* encabezado*/
 div.encabezado img{
-  width: 100%;
+  width: 100%!important;
   margin-top: 120px;
 }
 
@@ -520,7 +530,7 @@ div.encabezado img{
     margin-top: 8%;
   } 
   div.encabezado img{
-    width: 100%!important;
+    width: 100%;
     
   }
   
@@ -571,10 +581,8 @@ div.encabezado img{
     width: 50%;
     float: right;
   } div.encabezado img{
-    width: 40%;
- 
-    margin-top: 100px ;
-  }
+    width: 40%;  
+   }
   
 }
 
