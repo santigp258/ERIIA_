@@ -65,7 +65,7 @@ if(resumenLista.length > 0){
 
  //    Cuenta regresiva
 
-    $(".cuenta-regresiva").countdown("2020/09/25 10:00:00", function(event){
+    $(".cuenta-regresiva").countdown("2020/09/25 08:00:00", function(event){
         $("#dias").html(event.strftime("%D"));
         $("#horas").html(event.strftime("%H"));
         $("#minutos").html(event.strftime("%M"));

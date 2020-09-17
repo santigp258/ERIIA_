@@ -44,7 +44,6 @@
  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
  <script src="js/plugins.js"></script>
  <script src="js/leaflet.js"></script>
- <script src="js/map.js"></script>
  <script src="jquery.js"></script>
  <script src="js/jquery.animateNumber.js"></script>
  <script src="js/jquery.countdown.js"></script>
@@ -76,7 +75,6 @@
     }
   ?>
  <script src="js/bootstrap.js"></script>
- <script src="js/menu.js"></script>
  
  
 
