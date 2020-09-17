@@ -23,16 +23,7 @@
 
 <?php endif; ?>
 
-<?php   include_once 'includes/templates/header.php'; ?>
-
-
-
-    <?php if(isset($_GET['exitoso'])): 
-        
-        if($_GET['exitoso'] = "1"):
-            echo "Registro Exitoso";
-        endif;
-    endif;  ?>
+ 
 
 
 
