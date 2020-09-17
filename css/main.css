@@ -863,6 +863,11 @@ div.invitado-info p{
    font-size: 1em;
  }
 }
+@media only screen and (min-width:1366px){
+div.invitado-info .invitadoimg{
+  width: 30%;
+}
+}
  /*contador */
 .parallax::before{
   width:100%;
