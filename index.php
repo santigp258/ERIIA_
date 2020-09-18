@@ -45,45 +45,53 @@
           <?php } ?>
         </nav>
 
-        <?php
-        try {
-          require_once('includes/funciones/bd_conexion.php');
-          $sql  = " SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
-          $sql .= " FROM eventos ";
-          $sql .= " INNER JOIN categoria_evento ";
-          $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
-          $sql .= " INNER JOIN invitados ";
-          $sql .= " ON eventos.id_inv = invitados.invitado_id ";
-          $sql .= " AND eventos.id_cat_evento = 1 ";
-          $sql .= " ORDER BY evento_id LIMIT 2;";
-        } catch (\Exception $e) {
-          echo $e->getMessage();
-        }
-        ?>
-        <?php $conn->multi_query($sql); ?>
+        <?php   
+        try{
+        require_once('includes/funciones/bd_conexion.php');
+        $sql  = " SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
+        $sql .= " FROM eventos ";
+        $sql .= " INNER JOIN categoria_evento ";
+        $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
+        $sql .= " INNER JOIN invitados ";
+        $sql .= " ON eventos.id_inv = invitados.invitado_id ";
+        $sql .= " AND eventos.id_cat_evento = 1 ";
+        $sql .= " ORDER BY evento_id LIMIT 2;";
+         
+        $sql .= " SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
+        $sql .= " FROM eventos ";
+        $sql .= " INNER JOIN categoria_evento ";
+        $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
+        $sql .= " INNER JOIN invitados ";
+        $sql .= " ON eventos.id_inv = invitados.invitado_id ";
+        $sql .= " AND eventos.id_cat_evento = 2 ";
+        $sql .= " ORDER BY evento_id LIMIT 2;";
+     } catch(\Exception $e){
+             echo $e->getMessage();
+     }
+       ?>
+      <?php  $conn->multi_query($sql);?>
 
-        <?php
+      <?php
 
-        do {
-          $resultado = $conn->store_result();
-          $row = $resultado->fetch_all(MYSQLI_ASSOC); ?>
+      do{
+            $resultado = $conn->store_result();
+            $row = $resultado->fetch_all(MYSQLI_ASSOC); ?>
 
-          <?php $i = 0; ?>
-          <?php foreach ($row as $evento) : ?>
-            <?php if ($i % 2 == 0) { ?>
-              <div id="<?php echo strtolower($evento['cat_evento']) ?>" class="info-curso ocultar clearfix">
-              <?php  } ?>
+            <?php $i = 0; ?>
+            <?php  foreach($row as $evento): ?>
+              <?php if($i % 2 == 0){ ?>
+            <div id="<?php echo strtolower($evento['cat_evento']) ?>" class="info-curso ocultar clearfix">
+            <?php  } ?>
 
-              <div class="detalle-evento">
-                <h3><?php echo $evento['nombre_evento'] ?></h3>
-                <p><i class="far fa-clock"></i> <?php echo $evento['hora_evento']; ?></p>
-                <p><i class="far fa-calendar-alt"></i><?php echo $evento['fecha_evento']; ?></p>
-                <p><i class="far fa-user"></i><?php echo $evento['nombre_invitado'] . " " . $evento['apellido_invitado']; ?></p>
-              </div>
-              <!--primer evento-->
-
-
-              <?php if ($i % 2 == 1) : ?>
+            <div class="detalle-evento">
+              <h3><?php echo $evento['nombre_evento'] ?></h3>
+              <p><i class="far fa-clock"></i> <?php echo $evento['hora_evento']; ?></p>
+            <p><i class="far fa-calendar-alt"></i><?php echo $evento['fecha_evento']; ?></p>
+            <p><i class="far fa-user"></i><?php echo $evento['nombre_invitado'] . " " . $evento['apellido_invitado']; ?></p>
+            </div> <!--primer evento-->
+  
+              
+              <?php if($i % 2 == 1): ?>
                 <a href="calendario.php" class="button float-right">Ver todos</a>
            </div> <!--talleres-->
               <?php  endif; ?>
