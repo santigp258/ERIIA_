@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-09-2020 a las 05:18:39
+-- Tiempo de generación: 18-09-2020 a las 04:01:19
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -40,7 +40,8 @@ CREATE TABLE `categoria_evento` (
 --
 
 INSERT INTO `categoria_evento` (`id_categoria`, `cat_evento`, `icono`) VALUES
-(1, 'Talleres', 'fa-code');
+(1, 'Mañana', 'fa-coffee'),
+(2, 'Tarde', 'fa-sun');
 
 -- --------------------------------------------------------
 
@@ -99,7 +100,7 @@ INSERT INTO `departamento` (`id_depart`, `nombre_depart`) VALUES
 
 CREATE TABLE `eventos` (
   `evento_id` tinyint(10) NOT NULL,
-  `nombre_evento` varchar(100) NOT NULL,
+  `nombre_evento` varchar(200) NOT NULL,
   `fecha_evento` date NOT NULL,
   `hora_evento` time NOT NULL,
   `id_cat_evento` tinyint(4) NOT NULL,
@@ -111,12 +112,12 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `id_cat_evento`, `id_inv`) VALUES
-(1, 'Aún no', '2020-09-24', '09:00:00', 1, 5),
-(2, '¿Deberíamos modelar el \r\ncomportamiento?', '2020-09-24', '10:00:00', 1, 1),
-(3, 'Presente y Futuro de la Distribución Urbana de Mercancías en Colombia', '2020-09-24', '11:00:00', 1, 4),
-(4, 'Cadenas de Suministros Resilientes', '2020-09-24', '13:00:00', 1, 3),
-(5, 'Diseño de Logística Interna en planta de ensamblaje automotriz', '2020-09-24', '14:00:00', 1, 2),
-(6, 'Aún no está la información', '2020-09-24', '15:00:00', 1, 6);
+(1, 'Afectaciones a la logística de hidrocarburos en Colombia, resultado de la crisis sanitaria generada por COVID-19.', '2020-09-25', '09:00:00', 1, 5),
+(2, '¿Deberíamos modelar el \r\ncomportamiento?', '2020-09-25', '10:00:00', 1, 1),
+(3, 'Presente y Futuro de la Distribución Urbana de Mercancías en Colombia', '2020-09-25', '11:00:00', 1, 4),
+(4, 'Cadenas de Suministros Resilientes', '2020-09-25', '13:00:00', 2, 3),
+(5, 'Diseño de Logística Interna en planta de ensamblaje automotriz', '2020-09-25', '14:00:00', 2, 2),
+(6, 'Aún no está la información', '2020-09-25', '15:00:00', 2, 6);
 
 -- --------------------------------------------------------
 
@@ -140,7 +141,7 @@ CREATE TABLE `invitados` (
 INSERT INTO `invitados` (`invitado_id`, `nombre_invitado`, `apellido_invitado`, `descripcion`, `url_imagen`, `minurl_imagen`) VALUES
 (1, 'PhD. Oscar David ', 'Barrera Ferro', '<ul>\r\n    <li>-Ingeniero Industrial</li><br>\r\n    <li>-Master en Ingeniería Área Industrial</li><br>\r\n    <li>-Phd Management Sciences</li>\r\n</ul><br>\r\n\r\nActualmente es Profesor Asistente del Departamento de Ingeniería Industrial de la Pontificia Universidad Javeriana', 'oscar.jpg', 'minoscar.jpg'),
 (2, 'M.C.I Rafael Emilio', ' Casadiego Sarmiento', '<ul>\r\n    <li>-Ingeniero Industrial</li><br>\r\n    <li>-Especialista en Alta Gerencia</li><br>\r\n    <li>-Magister en Controles Industriales</li><br>\r\n</ul>', 'rafael.jpg', 'minrafael.jpg'),
-(3, 'Dr. Benito ', 'Sánchez Lara', '<ul>\r\n    <li>-Es Doctor en Ingeniería.</li><br>\r\n    <li>-Profesor de tiempo completo en la Facultad de Ingeniería de la (UNAM)</li><br>\r\n</ul>', 'benito.jpg', 'minbenito.jpg'),
+(3, 'Dr. Benito ', 'Sánchez Lara', '<ul>\r\n    <li>-Doctor en Ingeniería.</li><br>\r\n    <li>-Profesor de tiempo completo en la Facultad de Ingeniería de la (UNAM)</li><br>\r\n</ul>', 'benito.jpg', 'minbenito.jpg'),
 (4, 'Dr. Edgardo', ' Sánchez Rodriguez', '<ul>\r\n    <li>-Ingeniero Industrial</li><br>\r\n    <li>-Maestría en Administración</li><br>\r\n</ul>\r\n', 'edgardo.jpg', 'minedgardo.jpg'),
 (5, 'MSC. Hernán ', 'Ortiz Arturo', '<ul>\r\n    <li>-Ingeniero Industrial</li><br>\r\n    <li>-Magister en Negocios</li><br>\r\n    <li>-Gerente de Riesgos y Seguridad de Procesos</li><br>\r\n<br>\r\n    <li>-Experiencia como:</li>\r\n    <li>-Profesor Postgrado Escuela de Administración</li><br>\r\n    <li>-Gerente HSEQ</li><br>\r\n    <li>-Profesor de Catedra Ingeniería</li><br>\r\n    <li>-Profesor Cátedra Instituto de Posgrados</li><br>\r\n</ul>', 'hernan.jpg', 'minhernan.jpg'),
 (6, 'MSC. Vivian Lorena', ' Chud Pantoja', '<br><ul>\r\n    <li>\r\n        -Magíster en Ingeniería con énfasis en Ingeniería Industrial\r\n    </li><br>\r\n    <li>\r\n        -Ingeniera Industrial\r\n    </li><br>\r\n    <li>\r\n        -Docente en el área de Ingeniería Industrial en la Universidad del Valle Sede Zarzal\r\n    </li><br>\r\n    <li>\r\n        -Directora del Grupo de Investigación Gestión Empresarial, Desarrollo, Sociedad y Cultura – GEDESC de la Sede Zarzal\r\n    </li><br>\r\n    <li>\r\n        -Líder de la sublínea de investigación gestión de donaciones en el proyecto de Investigación SIGELO. \r\n    </li><br>\r\n</ul>', 'chud.jpg', 'minchud.jpg');
@@ -183,6 +184,14 @@ CREATE TABLE `Registrados` (
   `direccion_registrado` varchar(70) NOT NULL,
   `tyc` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `Registrados`
+--
+
+INSERT INTO `Registrados` (`id_registrado`, `nombre_registrado`, `apellido_registrado`, `email_registrado`, `telefono_registrado`, `id_ocupacion`, `departamento_registrado`, `ciudad_registrado`, `direccion_registrado`, `tyc`) VALUES
+(1, 'Santiagos', 'Guerrero', 'santiguerrero@gmai.com', '12345566', 1, 10, 'sa', '122', 'on'),
+(2, 'sa', 'saa', 'santiguerrero@gmai.com', '111111111', 1, 2, 'k', 'd', 'on');
 
 --
 -- Índices para tablas volcadas
@@ -236,7 +245,7 @@ ALTER TABLE `Registrados`
 -- AUTO_INCREMENT de la tabla `categoria_evento`
 --
 ALTER TABLE `categoria_evento`
-  MODIFY `id_categoria` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_categoria` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `departamento`
@@ -248,7 +257,7 @@ ALTER TABLE `departamento`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `evento_id` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `evento_id` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `invitados`
@@ -266,7 +275,7 @@ ALTER TABLE `ocupacion`
 -- AUTO_INCREMENT de la tabla `Registrados`
 --
 ALTER TABLE `Registrados`
-  MODIFY `id_registrado` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_registrado` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
