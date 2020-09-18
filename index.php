@@ -70,7 +70,7 @@
 
           <?php $i = 0; ?>
           <?php foreach ($row as $evento) : ?>
-            <?php if ($i % 3 == 0) { ?>
+            <?php if ($i % 2 == 0) { ?>
               <div id="<?php echo strtolower($evento['cat_evento']) ?>" class="info-curso ocultar clearfix">
               <?php  } ?>
 
