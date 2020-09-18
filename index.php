@@ -7,7 +7,7 @@
     <br>
     Es en este aspecto, que en el marco del décimo aniversario del Encuentro Regional de Ingeniería Industrial y Afines -ERIIA, hemos querido abordar un tema de gran interés para el sector comercial, empresarial y académico, pues éste será materia de importantes investigación en el próximo lustro, donde evaluaremos cuán preparados estamos para afrontar situaciones que en poco tiempo paralizaron la economía mundial. </p>
     <div class="brieferiia">
-  <a class="brief" target="a_blank" href="https://drive.google.com/file/d/1CE5JvRniZT1g87v2d_NgkPBC9AKjcusc/view?usp=sharing">BRIEF ERIIA 2020</a>
+  <a class="brief" target="a_blank" href="brief/brief.pdf">BRIEF ERIIA 2020</a>
 </div>
 </section>
 
@@ -70,7 +70,7 @@
 
           <?php $i = 0; ?>
           <?php foreach ($row as $evento) : ?>
-            <?php if ($i % 2 == 0) { ?>
+            <?php if ($i % 3 == 0) { ?>
               <div id="<?php echo strtolower($evento['cat_evento']) ?>" class="info-curso ocultar clearfix">
               <?php  } ?>
 
@@ -85,13 +85,12 @@
 
               <?php if ($i % 2 == 1) : ?>
                 <a href="calendario.php" class="button float-right">Ver todos</a>
-              </div>
-              <!--talleres-->
-            <?php endif; ?>
-            <?php $i++; ?>
-          <?php endforeach; ?>
-          <?php $resultado->free(); ?>
-        <?php  } while ($conn->more_results() && $conn->next_result()); ?>
+           </div> <!--talleres-->
+              <?php  endif; ?>
+           <?php  $i++; ?>
+       <?php  endforeach; ?>
+       <?php $resultado->free(); ?>
+  <?php  } while($conn->more_results() && $conn->next_result()); ?>
 
       </div>
       <!--programa-evento-->
