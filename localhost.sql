@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 18-09-2020 a las 04:01:19
+-- Tiempo de generación: 18-09-2020 a las 04:06:18
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -186,14 +186,6 @@ CREATE TABLE `Registrados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `Registrados`
---
-
-INSERT INTO `Registrados` (`id_registrado`, `nombre_registrado`, `apellido_registrado`, `email_registrado`, `telefono_registrado`, `id_ocupacion`, `departamento_registrado`, `ciudad_registrado`, `direccion_registrado`, `tyc`) VALUES
-(1, 'Santiagos', 'Guerrero', 'santiguerrero@gmai.com', '12345566', 1, 10, 'sa', '122', 'on'),
-(2, 'sa', 'saa', 'santiguerrero@gmai.com', '111111111', 1, 2, 'k', 'd', 'on');
-
---
 -- Índices para tablas volcadas
 --
 
@@ -275,7 +267,7 @@ ALTER TABLE `ocupacion`
 -- AUTO_INCREMENT de la tabla `Registrados`
 --
 ALTER TABLE `Registrados`
-  MODIFY `id_registrado` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_registrado` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
