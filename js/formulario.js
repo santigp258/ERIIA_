@@ -3,21 +3,22 @@ const inputs = document.querySelectorAll('#formulario input');
 const selects = document.querySelectorAll('#formulario select');
 
 const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,20}$/, // Letras y espacios, pueden llevar acentos.
-	apellido: /^[a-zA-ZÀ-ÿ\s]{1,20}$/, 		// /^[a-zA-Z0-9\_\-]{4,16}$/ Letras, numeros, guion y guion_bajo
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 		// Letras, numeros, guion y guion_bajo
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+	pais:/^[a-zA-ZÀ-ÿ\s]{1,25}$/,
 	ciudad: /^[a-zA-ZÀ-ÿ\s]{1,20}$/,
-	direccion: /^[a-zA-Z0-9À-ÿ#-_\s]{1,50}$/   //[a-zA-Z0-9-ÿ#-_.+-Àº ]{1,20}$
+	direccion: /^[a-zA-Z0-9À-ÿ#-_\s]{1,50}$/   //admite guiones, espacios en blanco, todo tipo de letras
 }
 
 const campos = {
 	nombre: false,
 	apellido: false,
-	/* password: false, */
 	email: false,
 	telefono: false,
+	pais: false, 
 	ocupacion: false, 
 	departamento: false, 
 	ciudad: false, 
@@ -37,6 +38,9 @@ const validarFormulario = (e) => {
 		break;
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
+		break;
+		case "pais":
+			validarCampo(expresiones.pais, e.target, 'pais');
 		break;
 		case "ocupacion":
 			validar(); 
@@ -72,26 +76,6 @@ const validarCampo = (expresion, input, campo) => {
 	}
 }
 
-/* const validarPassword2 = () => {
-	const inputPassword1 = document.getElementById('password');
-	const inputPassword2 = document.getElementById('password2');
-
-	if(inputPassword1.value !== inputPassword2.value){
-		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos['password'] = false;
-	} else {
-		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
-		campos['password'] = true;
-	}
-} */
 function validar(){
 	var departamento= document.getElementById('departamento');
 	if(departamento.value==0 ||
@@ -128,7 +112,7 @@ formulario.addEventListener('submit', (e) => {
 	
 
 	const tyc = document.getElementById('tyc');
-	if(campos.nombre && campos.apellido && campos.email && campos.telefono && campos.ocupacion && campos.departamento && campos.ciudad && campos.direccion && tyc.checked ){
+	if(campos.nombre && campos.apellido && campos.email && campos.telefono && campos.pais && campos.ocupacion && campos.departamento && campos.ciudad && campos.direccion && tyc.checked ){
 		
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {

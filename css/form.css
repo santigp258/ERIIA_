@@ -124,7 +124,11 @@ div.formulario__mensaje p{
 	flex-direction: column;
 	align-items: center;
 }
-
+.formulario__direccion{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
 .formulario__btn {
 	height: 45px;
 	line-height: 45px;

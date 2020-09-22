@@ -32,7 +32,7 @@
 				</div>
 				<p class="formulario__input-error">El email solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
 			</div>
-
+		
 			<!-- Grupo: Teléfono -->
 			<div class="formulario__grupo" id="grupo__telefono">
 				<label for="telefono" class="formulario__label">Teléfono</label>
@@ -43,21 +43,31 @@
 				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
 			</div>
     
-				<div class="formulario__grupo" id="grupo__ocupacion">
-				  <label for="ocupacion">Ocupación</label>
-				  <select id="ocupacion" name="id_ocupacion" class="browser-default custom-select">
-					<option selected value="">--Seleccione--</option>
-					<option value="1">Estudiante</option>
-					<option value="2">Profesor</option>
-					<option value="3">Particular</option>
-				</select>
-				<p class="formulario__input-error">Por favor, seleccione una opción valida.</p>
-				</div> <!-- ocupación -->
+			
+				
+			<div class="formulario__grupo" id="grupo__pais">
+				<label for="pais" class="formulario__label">País</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="pais" id="pais" placeholder="Colombia">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo no debe tener números, simbolos o cualquier otro caracter especial.</p>
+			</div> <!-- ciudad -->
+			<div class="formulario__grupo" id="grupo__ciudad">
+				<label for="ciudad" class="formulario__label">Ciudad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="ciudad" id="ciudad" placeholder="Bucaramanga">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo no debe tener números, simbolos o cualquier otro caracter especial.</p>
+			</div> <!-- ciudad -->
+	
 			
 				<div class="formulario__grupo" id="grupo__departamento">
 				  <label for="departamento">Departamento</label>
 				  <select id="departamento" name="departamento" class="browser-default custom-select">
 					<option value="">--Seleccione--</option>
+					<option value="33">**Internacional**</option>
 					<option value="1">Amazonas</option>
 					<option value="2">Antioquía</option>
 					<option value="3">Arauca</option>
@@ -93,19 +103,19 @@
 				  </select>
 				  <p class="formulario__input-error">Por favor, seleccione una opción valida.</p>
 				</div>  <!-- departamento -->
-				
-			<div class="formulario__grupo" id="grupo__ciudad">
-				<label for="ciudad" class="formulario__label">Ciudad</label>
-				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="ciudad" id="ciudad" placeholder="Bucaramanga">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-				</div>
-				<p class="formulario__input-error">Este campo no debe tener números, simbolos o cualquier otro caracter especial.</p>
-			</div> <!-- ciudad -->
-	
-				<div class="formulario__grupo" id="grupo__direccion">
-					<label for="ciudad" class="formulario__label">Direccion</label>
-					<div class="formulario__grupo-input">
+				<div class="formulario__grupo" id="grupo__ocupacion">
+				  <label for="ocupacion">Ocupación</label>
+				  <select id="ocupacion" name="id_ocupacion" class="browser-default custom-select">
+					<option selected value="">--Seleccione--</option>
+					<option value="1">Estudiante</option>
+					<option value="2">Profesor</option>
+					<option value="3">Particular</option>
+				</select>
+				<p class="formulario__input-error">Por favor, seleccione una opción valida.</p>
+				</div> <!-- ocupación -->
+				<div class="formulario__grupo formulario__direccion" id="grupo__direccion">
+					<label for="direccion" class="formulario__label">Dirección</label>
+					<div class="formulario__grupo-input input_total">
 						<input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="Cra 1 #2-80">
 						<i class="formulario__validacion-estado fas fa-times-circle"></i>
 					</div>
@@ -113,7 +123,7 @@
 				</div> <!-- direccion -->
 
 			<!-- Grupo: Terminos y Condiciones -->
-			<div class="formulario__grupo" id="grupo__terminos">
+			<div class="formulario__grupo  formulario__grupo-btn-enviar" id="grupo__terminos">
 				<label class="formulario__label">
 					<input class="formulario__checkbox" type="checkbox" name="tyc" id="tyc" data-toggle="modal" data-target="#exampleModalLong">
 					Acepto los <a href="tyc.php" target="a_blank">Términos y condiciones</a>
@@ -125,13 +135,12 @@
 			</div>
 
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn" name="submit">Enviar</button>
+				<button type="submit" id="btnExito" class="formulario__btn" name="submit">Enviar</button>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 		</form>
   
 </section>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
