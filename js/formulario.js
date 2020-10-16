@@ -8,8 +8,8 @@ const expresiones = {
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-	pais:/^[a-zA-ZÀ-ÿ\s]{1,25}$/,
-	ciudad: /^[a-zA-ZÀ-ÿ\s]{1,20}$/,
+	pais:/^[a-zA-ZÀ-ÿ\s]{1,25}$/, // Letras y espacios, pueden llevar acentos.
+	ciudad: /^[a-zA-ZÀ-ÿ\s]{1,20}$/, // Letras y espacios, pueden llevar acentos.
 	direccion: /^[a-zA-Z0-9À-ÿ#-_\s]{1,50}$/   //admite guiones, espacios en blanco, todo tipo de letras
 }
 
@@ -77,8 +77,8 @@ const validarCampo = (expresion, input, campo) => {
 }
 
 function validar(){
-	var departamento= document.getElementById('departamento');
-	if(departamento.value==0 ||
+	const departamento = document.getElementById('departamento');
+	if(departamento.value == 0 ||
 	 departamento.value == "") {
 		document.querySelector(`#grupo__departamento .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['departamento'] = false;
@@ -87,8 +87,8 @@ function validar(){
 		campos['departamento'] = true;
 	  }
 
-	  var ocupacion= document.getElementById('ocupacion');
-	  if(ocupacion.value==0 ||
+	  const ocupacion = document.getElementById('ocupacion');
+	  if(ocupacion.value == 0 ||
 		ocupacion.value == "") {
 		   document.querySelector(`#grupo__ocupacion .formulario__input-error`).classList.add('formulario__input-error-activo');
 		   campos['ocupacion'] = false;
